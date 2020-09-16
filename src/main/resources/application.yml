@@ -1,0 +1,10 @@
+openfoodfacts:
+  api:
+    url: https://world.openfoodfacts.org
+    version: 0
+logging:
+  level:
+    root: INFO
+    pl:
+      coderion:
+        openfoodfacts: INFO
