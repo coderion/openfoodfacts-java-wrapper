@@ -1,13 +1,31 @@
 package pl.coderion.openfoodfacts.openfoodfactsjavawrapper.model;
 
+import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
+
+import java.util.LinkedHashMap;
+import java.util.Map;
 
 /**
  * Copyright (C) Coderion sp. z o.o.
  */
 @Data
 public class Nutriments {
+
+    private float calcium;
+
+    @JsonProperty("calcium_value")
+    private float calciumValue;
+
+    @JsonProperty("calcium_100g")
+    private float calcium100G;
+
+    @JsonProperty("calcium_serving")
+    private float calciumServing;
+
+    @JsonProperty("calcium_unit")
+    private String calciumUnit;
 
     private float carbohydrates;
 
@@ -32,16 +50,45 @@ public class Nutriments {
     @JsonProperty("carbon-footprint-from-known-ingredients_serving")
     private float carbonFootprintFromKnownIngredientsServing;
 
+    private float cholesterol;
+
+    @JsonProperty("cholesterol_value")
+    private float cholesterolValue;
+
+    @JsonProperty("cholesterol_100g")
+    private float cholesterol100G;
+
+    @JsonProperty("cholesterol_serving")
+    private float cholesterolServing;
+
+    @JsonProperty("cholesterol_unit")
+    private String cholesterolUnit;
+
     private int energy;
 
     @JsonProperty("energy_value")
     private int energyValue;
 
+    @JsonProperty("energy-kcal_value")
+    private int energyKcalValue;
+
     @JsonProperty("energy_100g")
     private int energy100G;
 
+    @JsonProperty("energy-kcal")
+    private int energyKcal;
+
+    @JsonProperty("energy-kcal_100g")
+    private int energyKcal100G;
+
     @JsonProperty("energy_serving")
     private int energyServing;
+
+    @JsonProperty("energy-kcal_serving")
+    private int energyKcalServing;
+
+    @JsonProperty("energy-kcal_unit")
+    private String energyKcalUnit;
 
     @JsonProperty("energy_unit")
     private String energyUnit;
@@ -59,6 +106,37 @@ public class Nutriments {
 
     @JsonProperty("fat_unit")
     private String fatUnit;
+
+    private float fiber;
+
+    @JsonProperty("fiber_value")
+    private float fiberValue;
+
+    @JsonProperty("fiber_100g")
+    private float fiber100G;
+
+    @JsonProperty("fiber_serving")
+    private float fiberServing;
+
+    @JsonProperty("fiber_unit")
+    private String fiberUnit;
+
+    @JsonProperty("fruits-vegetables-nuts-estimate-from-ingredients_100g")
+    private float fruitsVegetablesNutsEstimateFromIngredients100G;
+
+    private float iron;
+
+    @JsonProperty("iron_value")
+    private float ironValue;
+
+    @JsonProperty("iron_100g")
+    private float iron100G;
+
+    @JsonProperty("iron_serving")
+    private float ironServing;
+
+    @JsonProperty("iron_unit")
+    private String ironUnit;
 
     @JsonProperty("nova-group")
     private float novaGroup;
@@ -139,4 +217,71 @@ public class Nutriments {
 
     @JsonProperty("sugars_unit")
     private String sugarsUnit;
+
+    @JsonProperty("trans-fat")
+    private float transFat;
+
+    @JsonProperty("trans-fat_value")
+    private float transFatValue;
+
+    @JsonProperty("trans-fat_100g")
+    private float transFat100G;
+
+    @JsonProperty("trans-fat_serving")
+    private float transFatServing;
+
+    @JsonProperty("trans-fat_unit")
+    private String transFatUnit;
+
+    @JsonProperty("vitamin-a")
+    private float vitaminA;
+
+    @JsonProperty("vitamin-a_value")
+    private float vitaminAValue;
+
+    @JsonProperty("vitamin-a_100g")
+    private float vitaminA100G;
+
+    @JsonProperty("vitamin-a_serving")
+    private float vitaminAServing;
+
+    @JsonProperty("vitamin-a_unit")
+    private String vitaminAUnit;
+
+    @JsonProperty("vitamin-c")
+    private float vitaminC;
+
+    @JsonProperty("vitamin-c_value")
+    private float vitaminCValue;
+
+    @JsonProperty("vitamin-c_100g")
+    private float vitaminC100G;
+
+    @JsonProperty("vitamin-c_serving")
+    private float vitaminCServing;
+
+    @JsonProperty("vitamin-c_unit")
+    private String vitaminCUnit;
+
+    @JsonProperty("vitamin-d")
+    private float vitaminD;
+
+    @JsonProperty("vitamin-d_value")
+    private float vitaminDValue;
+
+    @JsonProperty("vitamin-d_100g")
+    private float vitaminD100G;
+
+    @JsonProperty("vitamin-d_serving")
+    private float vitaminDServing;
+
+    @JsonProperty("vitamin-d_unit")
+    private String vitaminDUnit;
+
+    Map<String, Object> unknown = new LinkedHashMap<>();
+
+    @JsonAnySetter
+    void setDetail(String key, Object value) {
+        unknown.put(key, value);
+    }
 }
