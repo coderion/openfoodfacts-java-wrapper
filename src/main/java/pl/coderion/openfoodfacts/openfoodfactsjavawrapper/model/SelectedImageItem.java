@@ -6,11 +6,11 @@ import lombok.Data;
  * Copyright (C) Coderion sp. z o.o.
  */
 @Data
-public class Image {
+public class SelectedImageItem {
 
-    private ImageItem display;
+    private String en;
 
-    private ImageItem small;
+    private String fr;
 
-    private ImageItem thumb;
+    private String pl;
 }

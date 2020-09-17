@@ -1,6 +1,10 @@
 package pl.coderion.openfoodfacts.openfoodfactsjavawrapper.model;
 
+import com.fasterxml.jackson.annotation.JsonAnySetter;
 import lombok.Data;
+
+import java.util.LinkedHashMap;
+import java.util.Map;
 
 /**
  * Copyright (C) Coderion sp. z o.o.
@@ -8,9 +12,10 @@ import lombok.Data;
 @Data
 public class Images {
 
-    private Image front;
+    Map<String, Object> other = new LinkedHashMap<>();
 
-    private Image ingredients;
-
-    private Image nutrition;
+    @JsonAnySetter
+    void setDetail(String key, Object value) {
+        other.put(key, value);
+    }
 }

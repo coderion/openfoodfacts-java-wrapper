@@ -13,6 +13,8 @@ import java.util.Map;
 @Data
 public class Product {
 
+    private Images images;
+
     private Ingredient[] ingredients;
 
     @JsonProperty("languages_codes")
@@ -24,7 +26,7 @@ public class Product {
     private Nutriments nutriments;
 
     @JsonProperty("selected_images")
-    private Images selectedImages;
+    private SelectedImages selectedImages;
 
     private Source[] sources;
 
