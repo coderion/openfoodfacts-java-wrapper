@@ -66,20 +66,29 @@ public class Nutriments {
 
     private int energy;
 
+    @JsonProperty("energy-kcal")
+    private int energyKcal;
+
+    @JsonProperty("energy-kj")
+    private int energyKj;
+
     @JsonProperty("energy_value")
     private int energyValue;
 
     @JsonProperty("energy-kcal_value")
     private int energyKcalValue;
 
+    @JsonProperty("energy-kj_value")
+    private int energyKjValue;
+
     @JsonProperty("energy_100g")
     private int energy100G;
 
-    @JsonProperty("energy-kcal")
-    private int energyKcal;
-
     @JsonProperty("energy-kcal_100g")
     private int energyKcal100G;
+
+    @JsonProperty("energy-kj_100g")
+    private int energyKj100G;
 
     @JsonProperty("energy_serving")
     private int energyServing;
@@ -87,11 +96,17 @@ public class Nutriments {
     @JsonProperty("energy-kcal_serving")
     private int energyKcalServing;
 
-    @JsonProperty("energy-kcal_unit")
-    private String energyKcalUnit;
+    @JsonProperty("energy-kj_serving")
+    private int energyKjServing;
 
     @JsonProperty("energy_unit")
     private String energyUnit;
+
+    @JsonProperty("energy-kcal_unit")
+    private String energyKcalUnit;
+
+    @JsonProperty("energy-kj_unit")
+    private String energyKjUnit;
 
     private float fat;
 
@@ -278,10 +293,10 @@ public class Nutriments {
     @JsonProperty("vitamin-d_unit")
     private String vitaminDUnit;
 
-    Map<String, Object> unknown = new LinkedHashMap<>();
+    Map<String, Object> other = new LinkedHashMap<>();
 
     @JsonAnySetter
     void setDetail(String key, Object value) {
-        unknown.put(key, value);
+        other.put(key, value);
     }
 }
