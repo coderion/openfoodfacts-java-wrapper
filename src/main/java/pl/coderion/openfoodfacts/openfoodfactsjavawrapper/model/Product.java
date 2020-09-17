@@ -1,7 +1,11 @@
 package pl.coderion.openfoodfacts.openfoodfactsjavawrapper.model;
 
+import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
+
+import java.util.LinkedHashMap;
+import java.util.Map;
 
 /**
  * Copyright (C) Coderion sp. z o.o.
@@ -51,8 +55,14 @@ public class Product {
     @JsonProperty("allergens_from_ingredients")
     private String allergensFromIngredients;
 
+    @JsonProperty("allergens_from_user")
+    private String allergensFromUser;
+
     @JsonProperty("allergens_hierarchy")
     private String[] allergensHierarchy;
+
+    @JsonProperty("allergens_lc")
+    private String allergensLc;
 
     @JsonProperty("allergens_tags")
     private String[] allergensTags;
@@ -85,6 +95,9 @@ public class Product {
     @JsonProperty("categories_lc")
     private String categoriesLc;
 
+    @JsonProperty("categories_properties_tags")
+    private String[] categoriesPropertiesTags;
+
     @JsonProperty("categories_tags")
     private String[] categoriesTags;
 
@@ -98,6 +111,9 @@ public class Product {
 
     @JsonProperty("codes_tags")
     private String[] codesTags;
+
+    @JsonProperty("compared_to_category")
+    private String comparedToCategory;
 
     private int complete;
 
@@ -130,6 +146,21 @@ public class Product {
     private long createdT;
 
     private String creator;
+
+    @JsonProperty("data_quality_bugs_tags")
+    private String[] dataQualityBugsTags;
+
+    @JsonProperty("data_quality_errors_tags")
+    private String[] dataQualityErrorsTags;
+
+    @JsonProperty("data_quality_info_tags")
+    private String[] dataQualityInfoTags;
+
+    @JsonProperty("data_quality_tags")
+    private String[] dataQualityTags;
+
+    @JsonProperty("data_quality_warnings_tags")
+    private String[] dataQualityWarningsTags;
 
     @JsonProperty("data_sources")
     private String dataSources;
@@ -270,6 +301,9 @@ public class Product {
     @JsonProperty("_keywords")
     private String[] keywords;
 
+    @JsonProperty("known_ingredients_n")
+    private int knownIngredientsN;
+
     private String labels;
 
     @JsonProperty("labels_hierarchy")
@@ -371,6 +405,9 @@ public class Product {
     @JsonProperty("nova_group_debug")
     private String novaGroupDebug;
 
+    @JsonProperty("nova_group_tags")
+    private String[] novaGroupTags;
+
     @JsonProperty("nova_groups_tags")
     private String[] novaGroupsTags;
 
@@ -383,8 +420,14 @@ public class Product {
     @JsonProperty("nutrient_levels_tags")
     private String[] nutrientLevelsTags;
 
+    @JsonProperty("nutrition_data")
+    private String nutritionData;
+
     @JsonProperty("nutrition_data_per_debug_tags")
     private String[] nutritionDataPerDebugTags;
+
+    @JsonProperty("nutrition_data_prepared")
+    private String nutritionDataPrepared;
 
     @JsonProperty("nutrition_data_prepared_per")
     private String nutritionDataPreparedPer;
@@ -440,6 +483,9 @@ public class Product {
 
     @JsonProperty("pnns_groups_2_tags")
     private String[] pnnsGroups2Tags;
+
+    @JsonProperty("popularity_key")
+    private long popularityKey;
 
     @JsonProperty("producer_version_id")
     private String producerVersionId;
@@ -510,6 +556,12 @@ public class Product {
     @JsonProperty("traces_debug_tags")
     private String[] tracesDebugTags;
 
+    @JsonProperty("traces_from_user")
+    private String tracesFromUser;
+
+    @JsonProperty("traces_lc")
+    private String tracesLc;
+
     @JsonProperty("traces_tags")
     private String[] tracesTags;
 
@@ -527,4 +579,11 @@ public class Product {
 
     @JsonProperty("vitamins_tags")
     private String[] vitaminsTags;
+
+    Map<String, Object> other = new LinkedHashMap<>();
+
+    @JsonAnySetter
+    void setDetail(String key, Object value) {
+        other.put(key, value);
+    }
 }
