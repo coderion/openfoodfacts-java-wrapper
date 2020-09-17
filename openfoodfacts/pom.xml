@@ -7,12 +7,12 @@
 
     <parent>
         <groupId>pl.coderion.openfoodfacts</groupId>
-        <artifactId>offjw-parent</artifactId>
+        <artifactId>parent</artifactId>
         <version>0.0.1-SNAPSHOT</version>
-        <relativePath>../offjw-parent/pom.xml</relativePath>
+        <relativePath>../parent/pom.xml</relativePath>
     </parent>
 
-    <artifactId>offjw-service</artifactId>
+    <artifactId>openfoodfacts</artifactId>
 
     <build>
         <plugins>
@@ -42,8 +42,7 @@
                         </goals>
                         <phase>package</phase>
                         <configuration>
-                            <!--to be imported on other projects-->
-                            <classifier>app-to-import</classifier>
+                            <classifier>java-wrapper</classifier>
                         </configuration>
                     </execution>
                 </executions>

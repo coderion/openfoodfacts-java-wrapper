@@ -12,8 +12,8 @@
 	<description>Java wrapper for world.openfoodfacts.org</description>
 
 	<modules>
-		<module>offjw-parent</module>
-		<module>offjw-service</module>
+		<module>parent</module>
+		<module>openfoodfacts</module>
 	</modules>
 
 </project>
