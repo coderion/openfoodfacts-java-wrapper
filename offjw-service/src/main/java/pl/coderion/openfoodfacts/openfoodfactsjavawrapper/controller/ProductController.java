@@ -9,9 +9,6 @@ import org.springframework.web.bind.annotation.RestController;
 import pl.coderion.openfoodfacts.openfoodfactsjavawrapper.model.ProductResponse;
 import pl.coderion.openfoodfacts.openfoodfactsjavawrapper.rest.RestApiClient;
 
-/**
- * Copyright (C) Coderion sp. z o.o.
- */
 @RestController
 @RequestMapping("/product")
 public class ProductController {

@@ -4,9 +4,6 @@ import org.springframework.http.HttpStatus;
 
 import java.io.Serializable;
 
-/**
- * Copyright (C) Coderion sp. z o.o.
- */
 public class RestApiResponse<T> implements Serializable {
 
     private T body;
