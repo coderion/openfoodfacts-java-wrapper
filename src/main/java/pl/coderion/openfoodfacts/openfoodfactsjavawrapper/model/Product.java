@@ -150,7 +150,7 @@ public class Product {
     private String[] embCodesDebugTags;
 
     @JsonProperty("emb_codes_orig")
-    private String[] embCodesOrig;
+    private String embCodesOrig;
 
     @JsonProperty("emb_codes_tags")
     private String[] embCodesTags;
