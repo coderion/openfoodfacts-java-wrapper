@@ -1,4 +1,4 @@
-####Java maven wrapper for https://world.openfoodfacts.org 
+#### Java maven wrapper for https://world.openfoodfacts.org 
 
 # Usage
 
