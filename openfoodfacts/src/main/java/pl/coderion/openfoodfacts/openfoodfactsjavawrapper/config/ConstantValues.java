@@ -8,5 +8,5 @@ public interface ConstantValues {
 
     String API_VERSION = "0";
 
-    String USER_AGENT = String.format("OpenFoodFacts-Java-Wrapper - Java - Version %s - www.coderion.pl", WRAPPER_VERSION);
+    String USER_AGENT = String.format("OpenFoodFacts-Java-Wrapper - Java - Version %s - https://github.com/coderion/openfoodfacts-java-wrapper", WRAPPER_VERSION);
 }
