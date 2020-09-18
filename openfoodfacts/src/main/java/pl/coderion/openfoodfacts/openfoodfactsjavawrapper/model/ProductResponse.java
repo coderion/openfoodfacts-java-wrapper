@@ -13,7 +13,7 @@ public class ProductResponse {
 
     private String code;
 
-    private int status;
+    private boolean status;
 
     @JsonProperty("status_verbose")
     private String statusVerbose;

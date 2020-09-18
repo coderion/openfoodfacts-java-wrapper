@@ -1,13 +1,9 @@
 package pl.coderion.openfoodfacts.openfoodfactsjavawrapper.rest;
 
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.*;
-import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 import pl.coderion.openfoodfacts.openfoodfactsjavawrapper.config.ConstantValues;
 
-@Slf4j
-@Component
 public class DefaultRestApiClient implements RestApiClient {
 
     @Override
