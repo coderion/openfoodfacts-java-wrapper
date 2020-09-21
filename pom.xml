@@ -10,6 +10,14 @@
 	<packaging>pom</packaging>
 	<name>openfoodfacts-java-wrapper</name>
 	<description>Java wrapper for world.openfoodfacts.org</description>
+	<url>https://github.com/coderion/openfoodfacts-java-wrapper</url>
+
+	<licenses>
+		<license>
+			<name>MIT License</name>
+			<url>https://github.com/coderion/openfoodfacts-java-wrapper/blob/master/LICENSE</url>
+		</license>
+	</licenses>
 
 	<modules>
 		<module>parent</module>
