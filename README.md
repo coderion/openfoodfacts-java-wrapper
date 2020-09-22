@@ -11,7 +11,7 @@ Add one dependency in your POM:
     <dependency>
         <groupId>pl.coderion.openfoodfacts</groupId>
         <artifactId>openfoodfacts</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
+        <version>0.0.2</version>
         <classifier>java-wrapper</classifier>
     </dependency>
 </dependencies>
