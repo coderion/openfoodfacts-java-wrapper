@@ -5,7 +5,7 @@
 
     <groupId>pl.coderion.openfoodfacts</groupId>
 	<artifactId>openfoodfacts-java-wrapper</artifactId>
-	<version>0.0.7-SNAPSHOT</version>
+	<version>0.0.7</version>
 	<packaging>pom</packaging>
 	<name>openfoodfacts-java-wrapper</name>
 	<description>Java wrapper for world.openfoodfacts.org</description>
@@ -22,7 +22,7 @@
 		<connection>scm:git:git@github.com:coderion/openfoodfacts-java-wrapper</connection>
 		<developerConnection>scm:git:git@github.com:coderion/openfoodfacts-java-wrapper</developerConnection>
 		<url>git@github.com:coderion/openfoodfacts-java-wrapper</url>
-		<tag>openfoodfacts-java-wrapper-0.0.1</tag>
+		<tag>openfoodfacts-java-wrapper-0.0.7</tag>
 	</scm>
 
 	<distributionManagement>
