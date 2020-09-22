@@ -5,7 +5,7 @@
 
     <groupId>pl.coderion.openfoodfacts</groupId>
     <artifactId>parent</artifactId>
-    <version>0.0.2-SNAPSHOT</version>
+    <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <parent>
