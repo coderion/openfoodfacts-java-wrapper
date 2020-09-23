@@ -5,7 +5,7 @@
 
     <groupId>pl.coderion.openfoodfacts</groupId>
     <artifactId>parent</artifactId>
-    <version>0.0.9</version>
+    <version>0.0.10-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <parent>
@@ -70,6 +70,6 @@
     </dependencies>
 
   <scm>
-    <tag>openfoodfacts-java-wrapper-0.0.9</tag>
+    <tag>openfoodfacts-java-wrapper-0.0.1</tag>
   </scm>
 </project>
